@@ -1,0 +1,15 @@
+div#chatBox {
+    width: 100%;
+    max-width: 513px;
+    height: 500px;
+    overflow: scroll;
+    background: #ECECEC;
+}
+
+button {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ececec;
+    background: none;
+}

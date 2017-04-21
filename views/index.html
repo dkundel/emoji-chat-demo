@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Demo!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/g/jquery@3.1.1,emojione@2.2.7"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/chat/v0.13/twilio-chat.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Welcome <span id="identity"></span>
+      </h1>
+    </header>
+
+    <main>
+      <div id="emojiSelection">
+        <button onclick="send(':rofl:')">
+          <img class="emojione" alt="🤣" src="//cdn.jsdelivr.net/emojione/assets/png/1f923.png?v=2.2.4">
+        </button>
+        <button onclick="send(':pouting_cat:')">
+          <img class="emojione" alt="😾" src="//cdn.jsdelivr.net/emojione/assets/png/1f63e.png?v=2.2.4">
+        </button>
+        <button onclick="send(':beers:')">
+          <img class="emojione" alt="🍻" src="//cdn.jsdelivr.net/emojione/assets/png/1f37b.png?v=2.2.4">
+        </button>
+        <button onclick="send(':avocado:')">
+          <img class="emojione" alt="🥑" src="//cdn.jsdelivr.net/emojione/assets/png/1f951.png?v=2.2.4">
+        </button>
+        <button onclick="send(':penguin:')">
+          <img class="emojione" alt="🐧" src="//cdn.jsdelivr.net/emojione/assets/png/1f427.png?v=2.2.4">
+        </button>
+        <button onclick="send(':burrito:')">
+          <img class="emojione" alt="🌯" src="//cdn.jsdelivr.net/emojione/assets/png/1f32f.png?v=2.2.4">
+        </button>
+      </div>
+      <div id="chatBox">
+        
+      </div>
+    </main>
+
+    <script src="/client.js"></script>
+
+  </body>
+</html>
