@@ -14,12 +14,13 @@ $.getJSON('/token', function (data) {
   client = new Twilio.Chat.Client(data.token);
 
   client.initialize().then(function () {
-    return client.getChannelByUniqueName('🍻');
+    return client.getChannelByUniqueName('🦄');
   }).then(function (ch) {
     return ch;
   }, function () {
-    return client.createChannel({uniqueName: '🍻'});
+    return client.createChannel({uniqueName: '🦄'});
   }).then(function (ch) {
+    console.log('Received Channel');
     channel = ch;
     channel.join();
     channel.on('messageAdded', function (message) {
