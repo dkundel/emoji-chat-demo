@@ -11,15 +11,16 @@ function send(emojiCode) {
 }
 
 $.getJSON('/token', function (data) {
-  client = new Twilio.Chat.Client(data.token);
+  client = new Twilio.Chat.Client(data.token)
 
   client.initialize()
     .then(function () {
-      return client.getChannelByUniqueName('🦄');
-    }, function (ch) {
+      return client.getChannelByUniqueName('🇧🇮');
+    })
+    .then(function (ch) {
       return ch;
     }, function () {
-      return client.createChannel({ uniqueName: '🦄'});
+      return client.createChannel({uniqueName: '🇧🇮'});
     })
     .then(function (ch) {
       channel = ch;
